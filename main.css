@@ -9,6 +9,13 @@ body {
 ul {
     list-style-type: square;
 }
+* {
+    box-sizing: border-box; 
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
 #requirements {
     background-color:rgb(233, 210, 183)
 }
@@ -25,7 +32,7 @@ ul {
     background-image: url("banner.jpg");
     height: 100px;
     margin: 5px 5px 5px 5px;
-    padding-top: 70px;
+    padding-top: 30px;
     text-align: center;
     font-size: 60px;
     color: rgb(236, 236, 236);
@@ -43,7 +50,7 @@ ul {
     text-align: left;
 }
 .logo {
-    float: left;
+    float: right;
 }
 h1 {
     color: rgb(109, 12, 7);
@@ -90,7 +97,13 @@ a:link {
 a:visited {
     color: red; 
 }
-.contacts {
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+  }
+
+.col-1 {
     background-color: rgb(233, 210, 183);
     float: left;
     width: 33.33%;
@@ -98,9 +111,9 @@ a:visited {
     color: black;
     font-size: 20px;
     font-family: Times;
-    text-align: center;
+    text-align: left;
 }
-.categories {
+.col-2 {
     background-color: rgb(233, 210, 183);
     float: left;
     width: 33.33%;
@@ -108,9 +121,9 @@ a:visited {
     color: black;
     font-size: 20px;
     font-family: Times;
-    text-align: center;
+    text-align: left;
 }
-.quick_links {
+.col-3 {
     background-color: rgb(233, 210, 183);
     float: left;
     width: 33.33%;
@@ -118,6 +131,28 @@ a:visited {
     color: black;
     font-size: 20px;
     font-family: Times;
-    text-align: center;
+    text-align: left;
 }
-  
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+      text-align: center;
+      height: auto;
+    }
+    .banner {
+        padding-top: 10px;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .menu {
+        display: block;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    img {
+        width: 100%; 
+        height: auto
+    }
+}
